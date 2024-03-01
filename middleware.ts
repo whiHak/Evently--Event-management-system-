@@ -8,7 +8,6 @@ export default authMiddleware({
     "/api/webhook/clerk",
     "/api/webhook/strip",
     "/api/uploadthing",
-    "/api/webhook(.*)",
   ],
   // Routes that can always be accessed, and have
   // no authentication information
@@ -16,6 +15,7 @@ export default authMiddleware({
     "/api/webhook/clerk",
     "/api/webhook/strip",
     "/api/uploadthing",
+    "/api/webhook(.*)",
   ],
 });
 
