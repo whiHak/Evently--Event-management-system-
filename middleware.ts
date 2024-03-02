@@ -5,17 +5,17 @@ export default authMiddleware({
   publicRoutes: [
     "/",
     "/events/:id",
-    "/api/webhook/clerk",
-    "/api/webhook/strip",
+    "/api/webhooks/clerk",
+    "/api/webhooks/strip",
     "/api/uploadthing",
-    "/api/webhooks(.*)",
   ],
   // Routes that can always be accessed, and have
   // no authentication information
   ignoredRoutes: [
-    "/api/webhook/clerk",
-    "/api/webhook/strip",
+    "/api/webhooks/clerk",
+    "/api/webhooks/strip",
     "/api/uploadthing",
+    "/api/webhooks/clerk",
   ],
 });
 
@@ -25,3 +25,4 @@ export const config = {
   // for more information about configuring your Middleware
   matcher: ["/((?!.+\\.[\\w]+$|_next).*)", "/", "/(api|trpc)(.*)"],
 };
+ 
