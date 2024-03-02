@@ -16,6 +16,7 @@ export default authMiddleware({
     "/api/webhook/strip",
     "/api/uploadthing",
     "/api/webhook/clerk",
+    "/api/webhook/clerk",
   ],
 });
 
@@ -26,3 +27,4 @@ export const config = {
   // for more information about configuring your Middleware
   matcher: ["/((?!.+\\.[\\w]+$|_next).*)", "/", "/(api|trpc)(.*)"],
 };
+ 
