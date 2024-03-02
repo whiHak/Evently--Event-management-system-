@@ -5,21 +5,17 @@ export default authMiddleware({
   publicRoutes: [
     "/",
     "/events/:id",
-    "/api/webhooks/clerk",
     "/api/webhooks/strip",
     "/api/uploadthing",
   ],
   // Routes that can always be accessed, and have
   // no authentication information
   ignoredRoutes: [
-    "/api/webhooks/clerk",
+    "/api/webhooks/clerk(.*)",
     "/api/webhooks/strip",
     "/api/uploadthing",
-    "/api/webhooks/clerk",
-    "/api/webhooks/clerk",
   ],
 });
-
 
 export const config = {
   // Protects all routes, including api/trpc.
