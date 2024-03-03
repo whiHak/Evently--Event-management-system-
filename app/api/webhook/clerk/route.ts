@@ -1,3 +1,4 @@
+"use client"
 import { Webhook } from 'svix'
 import { headers } from 'next/headers'
 import { WebhookEvent } from '@clerk/nextjs/server'
@@ -66,6 +67,8 @@ export async function POST(req: Request) {
       photo: image_url,
     }
 
+
+    console.log("clerk user: " + user)
     const newUser = await createUser(user);
 
     if(newUser) {
